@@ -11,18 +11,18 @@ const CountContextProvider = ({ children }) => {
 
   const increment = (playerIndex) => {
     setCounts(prevCounts => {
-      const newCounts = [...prevCounts];
-      newCounts[playerIndex] = prevCounts[playerIndex] + 1;
-      return newCounts;
-    });
+      const newCounts = [...prevCounts]
+      newCounts[playerIndex] = prevCounts[playerIndex] + 1
+      return newCounts
+    })
   }
 
   const decrement = (playerIndex) => {
     setCounts(prevCounts => {
-      const newCounts = [...prevCounts];
-      newCounts[playerIndex] = prevCounts[playerIndex] - 1;
-      return newCounts;
-    });
+      const newCounts = [...prevCounts]
+      newCounts[playerIndex] = prevCounts[playerIndex] - 1
+      return newCounts
+    })
   }
 
   const value = {
@@ -32,7 +32,7 @@ const CountContextProvider = ({ children }) => {
     decrement,
     playerCount,
     setPlayerCount
-  };
+  }
 
   return (
     <CountContext.Provider value={value}>
