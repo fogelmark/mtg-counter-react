@@ -52,6 +52,16 @@
   color: #fff;
 }
 
+.health-points,
+.increment,
+.decrement {
+  border: 1px solid white;
+}
+
+.gear-icon {
+  border: 1px solid red;
+}
+
 .health-points {
   position: relative;
   font-size: 4.5em;
