@@ -9,9 +9,13 @@
   grid-area: 2 / span 2;
 }
 
+.mode-2:nth-child(2) {
+  border-top: 1px solid #000;
+}
+
+
 .mode-2:nth-child(1),
 .mode-2:nth-child(2) {
-  // border-top: 1px solid #000;
   .controls {
     grid-template-columns: repeat(3, 1fr);
   }

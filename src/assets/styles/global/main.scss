@@ -62,7 +62,6 @@
 .gear-icon {
   position: absolute;
   font-size: 1.3rem;
-  // padding: .2em;
   transition: rotate 300ms ease;
   margin: 5px;
 }
@@ -83,13 +82,9 @@
   span {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 }
-
-// .increment,
-// .decrement {
-
-// }
 
 .to-top {
   --gradient-direction: to top;

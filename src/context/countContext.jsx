@@ -4,7 +4,7 @@ export const CountContext = createContext()
 
 const CountContextProvider = ({ children }) => {
 
-  const [playerCount, setPlayerCount] = useState(4);
+  const [playerCount, setPlayerCount] = useState(2);
   const initialCounts = [40, 40, 40, 40];
 
   const [counts, setCounts] = useState(initialCounts);
