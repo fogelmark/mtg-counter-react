@@ -55,7 +55,7 @@ const App = () => {
 
   const getPlayerGradientClass = (playerIndex, playerCount) => {
     if (playerCount === 2) {
-      return 'to-bottom';
+      return playerIndex === 0 ? 'to-top' : 'to-bottom';
     }
   
     if (playerCount === 3 && playerIndex === 2) {

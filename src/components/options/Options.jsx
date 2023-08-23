@@ -49,7 +49,7 @@ const Options = ({ setPlayerCount, overlayClickHandler }) => {
       <div className={`logo-container ${isMenuOpen ? 'hidden' : ''}`} onClick={options}>
       </div>
       <div className={`menu ${isMenuOpen ? 'expand' : ''}`} onClick={closeMenu}>
-        <div className="d-flex justify-content-center align-items-center" style={{ height: '60px'}}>
+        <div className="d-flex justify-content-center align-items-center" style={{ height: '50px'}}>
           <div className="carousel-container">
             <div id="carouselExample" className='carousel slide'>
               <div className="carousel-inner">

@@ -53,8 +53,9 @@
 .mode-2 .mana-symbols-wrapper {
   .symbols-container {
     @include flex(center, center, row, 1rem);
-    img {
-      rotate: none;
-    }
   }
+}
+
+.player-1.mode-2 img {
+  rotate: 180deg;
 }
