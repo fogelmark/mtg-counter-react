@@ -71,7 +71,7 @@ const Player = ({ className, colors, playerIndex }) => {
             onMouseDown={handleDecrement} 
             onMouseUp={onMouseUp}
             >
-            <span><BiMinus /></span>
+            <span><BiMinus size={40} /></span>
           </div>
           <div className={`health-points`}>
             <span className='life'>{count}</span>
@@ -81,7 +81,7 @@ const Player = ({ className, colors, playerIndex }) => {
             onMouseDown={handleIncrement} 
             onMouseUp={onMouseUp}
             >
-            <span><BiPlus /></span>
+            <span><BiPlus size={40} /></span>
           </div>
         </div>
 

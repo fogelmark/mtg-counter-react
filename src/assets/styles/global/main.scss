@@ -52,6 +52,10 @@
 .player {
   position: relative;
   color: #fff;
+}
+
+.health-points {
+  position: relative;
   font-size: 4.5em;
 }
 
@@ -81,6 +85,11 @@
     justify-content: center;
   }
 }
+
+// .increment,
+// .decrement {
+
+// }
 
 .to-top {
   --gradient-direction: to top;

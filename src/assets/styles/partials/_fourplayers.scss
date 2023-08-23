@@ -48,6 +48,10 @@
   border-top: 1px solid #000;
 }
 
+.mode-4 .controls {
+  grid-template-rows: repeat(3, 1fr);
+}
+
 .mode-4:nth-child(2) .controls,
 .mode-4:nth-child(4) .controls {
   .increment {
