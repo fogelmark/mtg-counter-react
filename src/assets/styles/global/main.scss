@@ -57,8 +57,9 @@
 .gear-icon {
   position: absolute;
   font-size: 1.3rem;
-  padding: .2em;
+  // padding: .2em;
   transition: rotate 300ms ease;
+  margin: 5px;
 }
 
 .spin {

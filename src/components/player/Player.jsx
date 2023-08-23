@@ -63,8 +63,8 @@ const Player = ({ className, colors, playerIndex }) => {
         <div className={`color-picker ${toggleColorPicker ? 'hidden' : ''}`}>
           <Mana onColorSelected={handleColorSelection} />
         </div>
-
-        <BsGearFill className={`gear-icon ${isClicked ? 'spin' : ''}`} onClick={colorPicker} size={30} />
+        
+        <BsGearFill className={`gear-icon ${isClicked ? 'spin' : ''}`} onClick={colorPicker} size={20} />
 
         <div className={`controls ${!toggleColorPicker ? 'hidden' : ''}`}>
           <div className={`decrement ${isDecrementPressed ? 'selected' : ''}`} 
