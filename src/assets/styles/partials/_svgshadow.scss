@@ -1,0 +1,31 @@
+@import '../global/mixins';
+@import '../global/variables';
+@import '../global/animations';
+
+svg {
+  filter: drop-shadow(2px 2px 3px #00000055);
+}
+
+.mode-3.player-1 {
+  svg.gear-icon {
+    filter: drop-shadow(-2px -2px 3px #00000055);
+  }
+}
+.mode-3.player-2 {
+  svg.gear-icon {
+    filter: drop-shadow(2px -2px 3px #00000055);
+  }
+}
+
+.mode-4.player-1,
+.mode-4.player-3 {
+  svg.gear-icon {
+    filter: drop-shadow(-2px -2px 3px #00000055);
+  }
+}
+.mode-4.player-2,
+.mode-4.player-4 {
+  svg.gear-icon {
+    filter: drop-shadow(2px -2px 3px #00000055);
+  }
+}

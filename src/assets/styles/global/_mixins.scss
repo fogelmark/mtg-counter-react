@@ -1,0 +1,19 @@
+@mixin flex($justify: center, $align: center, $direction: row, $gap: 0, $inline: false) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin player-grid-columns {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+@mixin middle-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,48 @@
+@import '../../assets/styles/global/animations';
+@import '../../assets/styles/global/variables';
+@import '../../assets/styles/global/mixins';
+
+.counter {
+  position: absolute;
+  margin: 0 auto;
+  padding: .3rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: .3em;
+  align-items: center;
+}
+
+.fade-out {
+  animation-name: fade-out-down;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+}
+
+.health-points {
+  position: relative;
+}
+
+.player-3.mode-3 .counter,
+.mode-2 .counter {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 50px;
+}
+
+.player-1.mode-3 .counter,
+.player-1.mode-4 .counter,
+.player-3.mode-4 .counter {
+  top: 0;
+  bottom: 0;
+  left: 5px;
+  margin: auto 0;
+}
+.player-2.mode-3 .counter,
+.player-2.mode-4 .counter,
+.player-4.mode-4 .counter {
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto 0;
+}

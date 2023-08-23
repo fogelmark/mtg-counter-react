@@ -1,0 +1,115 @@
+@use '../../../components/player/Player.scss';
+@use '../../../components/options/Options.scss';
+@use '../../../components/counter/Counter.scss';
+@use '../../../components/mana/Mana.scss';
+@use '../../../components/overlay/Overlay.scss';
+@use '../partials/fourplayers';
+@use '../partials/threeplayers';
+@use '../partials/twoplayers';
+@use '../partials/svgshadow';
+@import './animations';
+@import './mixins';
+@import './variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // user-select: none;
+  // touch-action: manipulation;
+  overflow: hidden;
+  text-shadow: 2px 2px 3px #00000055;
+  // font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+.main-grid-content {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100lvh;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.color-picker {
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  opacity: 80%;
+}
+
+.hidden {
+  display: none;
+}
+
+.player {
+  position: relative;
+  color: #fff;
+  font-size: 4.5em;
+}
+
+.gear-icon {
+  position: absolute;
+  font-size: 1.3rem;
+  padding: .2em;
+  transition: rotate 300ms ease;
+}
+
+.spin {
+  rotate: 90deg;
+}
+
+.selected {
+  background-color: #00000020;
+}
+
+.controls .health-points,
+.controls .decrement,
+.controls .increment {
+  display: grid;
+  place-content: center;
+  span {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.to-top {
+  --gradient-direction: to top;
+}
+.to-bottom {
+  --gradient-direction: to bottom;
+}
+.to-left {
+  --gradient-direction: to left;
+}
+.to-right {
+  --gradient-direction: to right;
+}
+
+.player-1 {
+  --color-1: var(--dark-blue);
+  --color-2: var(--light-blue);
+  background: linear-gradient(var(--gradient-direction), var(--color-1), var(--color-2));
+}
+.player-2 {
+  --color-1: var(--dark-red);
+  --color-2: var(--light-red);
+  background: linear-gradient(var(--gradient-direction), var(--color-1), var(--color-2));
+}
+.player-3 {
+  --color-1: var(--dark-green);
+  --color-2: var(--light-green);
+  background: linear-gradient(var(--gradient-direction), var(--color-1), var(--color-2));
+}
+.player-4 {
+  --color-1: var(--dark-black);
+  --color-2: var(--light-black);
+  background: linear-gradient(var(--gradient-direction), var(--color-1), var(--color-2));
+}

@@ -1,0 +1,60 @@
+@import '../../assets/styles/global/animations';
+@import '../../assets/styles/global/variables';
+@import '../../assets/styles/global/mixins';
+
+
+/* GENERAL */
+.mana-symbols-wrapper {
+  height: 50vh;
+  .symbols-container {
+    padding: 1rem;
+    height: 100%;
+  }
+}
+
+/* 4 PLAYER */
+.mode-4 .symbols-container {
+  @include flex(center, center, column, 1rem);
+}
+
+.mode-4:nth-child(1) .symbols-container,
+.mode-4:nth-child(3) .symbols-container {
+  img {
+    rotate: $rotate-plus-90;
+  }
+}
+.mode-4:nth-child(2) .symbols-container,
+.mode-4:nth-child(4) .symbols-container {
+  img {
+    rotate: $rotate-minus-90;
+  }
+}
+
+/* 3 PLAYER */
+.player-1.mode-3,
+.player-2.mode-3 {
+  .symbols-container {
+    @include flex(center, center, column, 1rem);
+    height: 100%;
+  }
+}
+
+.player-3.mode-3 {
+  .symbols-container {
+    @include flex(center, center, row, 1rem);
+    height: 100%;
+    img {
+      rotate: none;
+    }
+  }
+}
+
+/* 2 PLAYER */
+.mode-2 .mana-symbols-wrapper {
+  .symbols-container {
+    @include flex(center, center, row, 1rem);
+    img {
+      rotate: none;
+    }
+  }
+}

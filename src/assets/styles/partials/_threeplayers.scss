@@ -1,0 +1,58 @@
+@import '../global/mixins';
+@import '../global/variables';
+@import '../global/animations';
+
+.mode-3:nth-child(1) {
+  border-right: .5px solid #000;
+}
+.mode-3:nth-child(2) {
+  border-left: 1px solid #000;
+}
+
+.mode-3:nth-child(1) div span {
+  rotate: $rotate-plus-90;
+}
+.mode-3:nth-child(2) div span {
+  rotate: $rotate-minus-90;
+}
+
+.mode-3:nth-child(3) {
+  grid-area: 2 / span 2;
+  border-top: 1px solid #000;
+  .controls {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.mode-3:nth-child(2) .gear-icon {
+  top: 0;
+  right: 0;
+}
+
+.player-1.mode-3 {
+  img {
+    rotate: $rotate-plus-90;
+  }
+}
+.player-2.mode-3 {
+  img {
+    rotate: $rotate-minus-90;
+  }
+}
+
+.mode-3:nth-child(1) .controls {
+  .increment {
+    grid-area: 3 / 1;
+  }
+  .decrement {
+    grid-area: 1 / 1;
+  }
+}
+.mode-3:nth-child(2) .controls {
+  .increment {
+    grid-area: 1 / 1;
+  }
+  .decrement {
+    grid-area: 3 / 1;
+  }
+}

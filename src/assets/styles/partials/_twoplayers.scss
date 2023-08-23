@@ -1,0 +1,26 @@
+@import '../global/mixins';
+@import '../global/variables';
+@import '../global/animations';
+
+.mode-2:nth-child(1) {
+  grid-area: 1 / span 2;
+}
+.mode-2:nth-child(2) {
+  grid-area: 2 / span 2;
+}
+
+.mode-2:nth-child(1),
+.mode-2:nth-child(2) {
+  border-top: .5px solid #000;
+  .controls {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.mode-2:nth-child(1) {
+  rotate: 180deg;
+}
+
+
+
+
