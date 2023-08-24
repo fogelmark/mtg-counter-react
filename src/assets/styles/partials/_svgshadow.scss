@@ -9,6 +9,11 @@ svg {
 .mode-2.player-1 {
   .increment,
   .decrement {
+    svg {
+      filter: drop-shadow(-2px -2px 3px #00000055);
+    }
+  }
+  .gear-icon {
     filter: drop-shadow(-2px -2px 3px #00000055);
   }
 }
