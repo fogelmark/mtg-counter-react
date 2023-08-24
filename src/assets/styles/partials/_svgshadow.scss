@@ -6,6 +6,13 @@ svg {
   filter: drop-shadow(2px 2px 3px #00000055);
 }
 
+.mode-2.player-1 {
+  .increment,
+  .decrement {
+    filter: drop-shadow(-2px -2px 3px #00000055);
+  }
+}
+
 .mode-3.player-1 {
   svg.gear-icon {
     filter: drop-shadow(-2px -2px 3px #00000055);

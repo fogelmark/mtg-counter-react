@@ -3,10 +3,10 @@ import Overlay from '../overlay/Overlay'
 import { MdRefresh } from "react-icons/md";
 import { PiSquareSplitVerticalFill } from "react-icons/pi";
 import { TbSalt } from "react-icons/tb";
-import { RiLayout4Fill, RiLayoutGridFill, RiLayoutRowFill } from "react-icons/ri";
+import { RiLayout4Fill, RiLayoutGridFill } from "react-icons/ri";
 import { CountContext } from '../../context/countContext';
 
-const Options = ({ setPlayerCount, overlayClickHandler }) => {
+const Options = ({ setPlayerCount }) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -37,11 +37,6 @@ const Options = ({ setPlayerCount, overlayClickHandler }) => {
     setCounts([40, 40, 40, 40])
     closeMenu()
   }
-
-    //TBD - Optional starting health?
-    // const twenty = () => {
-    //   setCounts([20, 20, 20, 20])
-    // }
 
   return (
     <>

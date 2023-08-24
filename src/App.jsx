@@ -5,8 +5,6 @@ import { CountContext } from './context/countContext';
 
 const App = () => {
 
-  // const [playerCount, setPlayerCount] = useState(2);
-
   const { playerCount, setPlayerCount } = useContext(CountContext)
 
   const colors = [
@@ -64,13 +62,6 @@ const App = () => {
   
     return playerIndex % 2 === 0 ? 'to-left' : 'to-right';
   }
-
-  // const overlayClickHandler = e => {
-  //   console.log(e.target);
-  //   if (e.target.classList.contains('overlay')) {
-  //     e.target.classList.add('hidden')
-  //   }
-  // }
 
   
   return (
