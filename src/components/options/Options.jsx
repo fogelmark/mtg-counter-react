@@ -5,12 +5,13 @@ import { PiSquareSplitVerticalFill } from "react-icons/pi";
 import { TbSalt } from "react-icons/tb";
 import { RiLayout4Fill, RiLayoutGridFill } from "react-icons/ri";
 import { CountContext } from '../../context/countContext';
+import Spinner from '../spinner/Spinner';
 
 const Options = ({ setPlayerCount }) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const { setCounts } = useContext(CountContext)
+  const { setCounts, isLoading } = useContext(CountContext)
 
   const options = () => {
     setIsMenuOpen(true)
@@ -41,9 +42,11 @@ const Options = ({ setPlayerCount }) => {
   return (
     <>
       <Overlay isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
-      <div className={`logo-container ${isMenuOpen ? 'hidden' : ''}`} onClick={options}>
-      </div>
-      <div className={`menu ${isMenuOpen ? 'expand' : ''}`} onClick={closeMenu}>
+      {isLoading ? <Spinner /> : (
+        <div className={`logo-container ${isMenuOpen ? 'hidden' : ''}`} onClick={options}>
+        </div>
+      )}
+      <div className={`menu ${isMenuOpen ? 'expand' : ''}`}>
         <div className="d-flex justify-content-center align-items-center" style={{ height: '50px'}}>
           <div className="carousel-container">
             <div id="carouselExample" className='carousel slide'>

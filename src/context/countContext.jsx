@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react'
+import Spinner from '../components/spinner/Spinner';
 
 export const CountContext = createContext()
 
@@ -6,6 +7,7 @@ const CountContextProvider = ({ children }) => {
 
   const [playerCount, setPlayerCount] = useState(2);
   const initialCounts = [40, 40, 40, 40];
+  const [isLoading, setIsLoading] = useState(false)
 
   const [counts, setCounts] = useState(initialCounts);
 
@@ -36,7 +38,7 @@ const CountContextProvider = ({ children }) => {
 
   return (
     <CountContext.Provider value={value}>
-      {children}
+      {isLoading ? <Spinner /> : children}
     </CountContext.Provider>
   )
 }
