@@ -47,7 +47,7 @@ const Options = ({ setPlayerCount }) => {
         </div>
       )}
       <div className={`menu ${isMenuOpen ? 'expand' : ''}`}>
-        <div className="d-flex justify-content-center align-items-center" style={{ height: '50px'}}>
+        <div className="d-flex justify-content-center align-items-center" style={{ height: '50px' }}>
           <div className="carousel-container">
             <div id="carouselExample" className='carousel slide'>
               <div className="carousel-inner">
@@ -59,9 +59,9 @@ const Options = ({ setPlayerCount }) => {
                   <RiLayout4Fill onClick={chooseThree} size={34} className='icon' />
                   <RiLayoutGridFill onClick={chooseFour} size={34} className='icon' />
                 </div>
-                <div className="carousel-item text-center">
+                {/* <div className={`carousel-item text-center`}>
                   <TbSalt size={34} className='icon' />
-                </div>
+                </div> */}
               </div>
               <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" onClick={(e) => { e.stopPropagation(); }}>
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>

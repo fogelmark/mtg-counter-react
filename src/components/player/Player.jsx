@@ -7,10 +7,10 @@ import { CountContext } from '../../context/countContext';
 
 const Player = ({ className, colors, playerIndex }) => {
 
-  const { 
-    counts, 
-    increment, 
-    decrement 
+  const {
+    counts,
+    increment,
+    decrement
   } = useContext(CountContext)
 
   const count = counts[playerIndex]
@@ -28,7 +28,7 @@ const Player = ({ className, colors, playerIndex }) => {
     setClickCounter(clickCounter - 1)
     setIsDecrementPressed(true)
   }
-  
+
   const handleIncrement = () => {
     increment(playerIndex)
     setClickCounter(clickCounter + 1)
@@ -37,10 +37,10 @@ const Player = ({ className, colors, playerIndex }) => {
 
   const onMouseUp = () => {
     setTimeout(() => {
-      setIsDecrementPressed(false);
-      setIsIncrementPressed(false);
+      setIsDecrementPressed(false)
+      setIsIncrementPressed(false)
     }, 100)
-  };
+  }
 
   const colorPicker = () => {
     setToggleColorPicker(!toggleColorPicker)
@@ -67,20 +67,20 @@ const Player = ({ className, colors, playerIndex }) => {
         <BsGearFill className={`gear-icon ${isClicked ? 'spin' : ''}`} onClick={colorPicker} size={25} />
 
         <div className={`controls ${!toggleColorPicker ? 'hidden' : ''}`}>
-          <div className={`decrement ${isDecrementPressed ? 'selected' : ''}`} 
-            onMouseDown={handleDecrement} 
+          <div className={`decrement ${isDecrementPressed ? 'selected' : ''}`}
+            onMouseDown={handleDecrement}
             onMouseUp={onMouseUp}
-            >
+          >
             <span><BiMinus size={40} /></span>
           </div>
           <div className={`health-points`}>
             <span className='life'>{count}</span>
             <Counter value={clickCounter} setClickCounter={setClickCounter} />
           </div>
-          <div className={`increment ${isIncrementPressed ? 'selected' : ''}`} 
-            onMouseDown={handleIncrement} 
+          <div className={`increment ${isIncrementPressed ? 'selected' : ''}`}
+            onMouseDown={handleIncrement}
             onMouseUp={onMouseUp}
-            >
+          >
             <span><BiPlus size={40} /></span>
           </div>
         </div>
