@@ -59,9 +59,6 @@ const Options = ({ setPlayerCount }) => {
                   <RiLayout4Fill onClick={chooseThree} size={34} className='icon' />
                   <RiLayoutGridFill onClick={chooseFour} size={34} className='icon' />
                 </div>
-                {/* <div className={`carousel-item text-center`}>
-                  <TbSalt size={34} className='icon' />
-                </div> */}
               </div>
               <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" onClick={(e) => { e.stopPropagation(); }}>
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
