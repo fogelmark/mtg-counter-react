@@ -44,7 +44,7 @@ const Options = ({ setPlayerCount }) => {
       <Overlay isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
       {isLoading ? <Spinner /> : (
         <div className={`logo-container ${isMenuOpen ? 'hidden' : ''}`} onClick={options}>
-          <img src={logo} />
+          <img loading='lazy' src={logo} />
         </div>
       )}
       <div className={`menu ${isMenuOpen ? 'expand' : ''}`}>
