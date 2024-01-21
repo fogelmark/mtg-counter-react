@@ -58,6 +58,9 @@
 .health-points {
   position: relative;
   font-size: 4.5em;
+  .life {
+    padding: 1rem;
+  }
 }
 
 .gear-icon {
@@ -85,6 +88,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 1rem;
   }
 }
 
