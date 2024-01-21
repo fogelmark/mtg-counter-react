@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import Overlay from '../overlay/Overlay'
 import { MdRefresh } from "react-icons/md";
 import { PiSquareSplitVerticalFill } from "react-icons/pi";
-import { TbSalt } from "react-icons/tb";
+import logo from '../../assets/images/mtglogo-colored.png'
 import { RiLayout4Fill, RiLayoutGridFill } from "react-icons/ri";
 import { CountContext } from '../../context/countContext';
 import Spinner from '../spinner/Spinner';
@@ -17,7 +17,7 @@ const Options = ({ setPlayerCount }) => {
     setIsMenuOpen(true)
   }
 
-  const closeMenu = e => {
+  const closeMenu = () => {
     setIsMenuOpen(false)
   }
 
@@ -44,6 +44,7 @@ const Options = ({ setPlayerCount }) => {
       <Overlay isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
       {isLoading ? <Spinner /> : (
         <div className={`logo-container ${isMenuOpen ? 'hidden' : ''}`} onClick={options}>
+          <img src={logo} />
         </div>
       )}
       <div className={`menu ${isMenuOpen ? 'expand' : ''}`}>
